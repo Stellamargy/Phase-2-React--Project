@@ -2,7 +2,7 @@ import LineItem from "./LineItem";
 
 function ItemList({items,handleCheck,handleDelete}){
     return(
-        <LineItem
+        <LineItem  
             items={items}
             handleCheck={handleCheck}
             handleDelete={handleDelete}
