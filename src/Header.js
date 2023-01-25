@@ -1,14 +1,12 @@
 function Header({title}){
+    return(
+        <header>
+            <h1>{title}</h1>
+        </header>
+       
 
-  return(
-      <>
-          <h1 style={{color:'blue'}}>{title}</h1>
-    
-       </>
+    );
+}
 
-  );
-}
-Header.defaultProps={
-  title:"Default Title"
-}
+
 export default Header;
