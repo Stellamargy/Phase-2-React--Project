@@ -1,6 +1,6 @@
 import { FaPlus } from "react-icons/fa";
 
-function AddItem({newItem,setNewItem,handleSubmit}){
+function AddItems({newItem,setNewItem,handleSubmit}){
     return(
         <form className="addForm" onSubmit={handleSubmit}>
             <label htmlFor="addItem">AddItem</label>
@@ -11,7 +11,7 @@ function AddItem({newItem,setNewItem,handleSubmit}){
                 required
                 placeholder="Add Item"
                 value={newItem}
-                setNewItem={setNewItem}
+                onChange={(e)=>setNewItem(e.target.value)}
 
             />
             <button 
@@ -27,4 +27,4 @@ function AddItem({newItem,setNewItem,handleSubmit}){
     );
 }
 
-export default AddItem;
+export default AddItems ;

@@ -1,5 +1,6 @@
 import Header from "./Header";
 import AddItem from "./AddItems";
+import SearchItem from "./SearchItem";
 import Content from "./Content";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -29,14 +30,27 @@ import { useState } from "react";
         setItems(listItems);
         localStorage.setItem('shoppinglist', JSON.stringify(listItems));
     }
+    const[search,SearchItem]=useState("")
 
     const handleDelete = (id) => {
         const listItems = items.filter((item) => item.id !== id);
         setItems(listItems);
         localStorage.setItem('shoppinglist', JSON.stringify(listItems));
     }
+    const addItem=(item)=>{
+        const id=items.length?items[items.length-1].id+1:1;
+        const newItem={id,checked:false,item};
+        const listItems=[...items,newItem]
+        setItems(listItems);
+        localStorage.setItem('shoppinglist', JSON.stringify(listItems));
+    }
 
     const handleSubmit=(e)=>{
+        e.preventDefault();
+        //addItem
+        addItem(newItem);
+        //reseting 
+        setNewItem('');
 
     }
     
@@ -48,6 +62,10 @@ import { useState } from "react";
                 newItem={newItem}
                 setNewItem={setNewItem}
                 handleSubmit={handleSubmit}
+            />
+            <SearchItem
+                search={search}
+                SearchItem={SearchItem}
             />
             <Content
                 items={items}
