@@ -17,8 +17,13 @@
     },
     {
       "id": 4,
-      "checked": false,
+      "checked": true,
       "item": "Juice"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "item": "Fruits"
     }
   ]
 }

@@ -45,15 +45,29 @@ function App() {
 
   }
   
-
-  const handleCheck = (id) => {
+//handling check 
+  const handleCheck =async  (id) => {
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
     setItems(listItems);
+
+     const myItem=listItems.filter((item)=>item.id===id)
+
+      //patch method,just updating.
+    const updateOptions ={
+      method:'PATCH',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({checked:myItem[0].checked})
+    };
+    const reqUrl=`${API_URL}/${id}`
+    const result= await apiRequest(reqUrl,updateOptions)
   }
 
   const handleDelete = (id) => {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
+    
   }
 
   const handleSubmit = (e) => {
