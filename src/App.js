@@ -63,12 +63,20 @@ function App() {
     const reqUrl=`${API_URL}/${id}`
     const result= await apiRequest(reqUrl,updateOptions)
   }
-
-  const handleDelete = (id) => {
+  
+  const handleDelete = async(id) => {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
+
+    // Delete Method
+    const deleteOptions={method:'DELETE'}
+    const reqUrl=`${API_URL}/${id}`
+    const result= await apiRequest(reqUrl,deleteOptions)
+
     
   }
+    
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

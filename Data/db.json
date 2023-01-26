@@ -16,11 +16,6 @@
       "item": "Bread"
     },
     {
-      "id": 4,
-      "checked": true,
-      "item": "Juice"
-    },
-    {
       "id": 5,
       "checked": false,
       "item": "Fruits"
