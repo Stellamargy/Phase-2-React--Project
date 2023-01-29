@@ -13,6 +13,7 @@ function App() {
   const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
 
+  // Fetching data from db.json
   useEffect(()=>{
     const fetchItems=async()=>{
       try{
@@ -33,7 +34,7 @@ function App() {
     const listItems = [...items, myNewItem];
     setItems(listItems);
 
-    //Post request
+    //Post (adding an item)
     const postOptions={
       method:'POST',
       headers:{
@@ -52,7 +53,7 @@ function App() {
 
      const myItem=listItems.filter((item)=>item.id===id)
 
-      //patch method,just updating.
+      //patch method,just updating,changes the status of check ,to be either true or false
     const updateOptions ={
       method:'PATCH',
       headers:{
@@ -68,7 +69,7 @@ function App() {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
 
-    // Delete Method
+    // Delete Method-deletes an item completely from db.json
     const deleteOptions={method:'DELETE'}
     const reqUrl=`${API_URL}/${id}`
     const result= await apiRequest(reqUrl,deleteOptions)
@@ -82,6 +83,7 @@ function App() {
     e.preventDefault();
     if (!newItem) return;
     addItem(newItem);
+    //resets after adding an item
     setNewItem('');
   }
 
