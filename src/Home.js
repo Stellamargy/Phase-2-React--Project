@@ -1,7 +1,9 @@
 function Home (){
     return(
-     <div>
-        <h1 >Home page</h1>
+     <div id="home">
+       
+        <h1>Let's get organised!!!</h1>
+        
      </div>
     )
 }

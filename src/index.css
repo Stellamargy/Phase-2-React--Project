@@ -192,3 +192,20 @@ button:hover {
   text-decoration: none;
 
 }
+
+#home {
+  height: 50vh;
+  min-height: 400px;
+  background-color: papayawhip;
+}
+
+#home,
+ #about
+ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
