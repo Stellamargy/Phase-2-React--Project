@@ -183,3 +183,12 @@ button:hover {
   outline: none;
 }
 
+.navbar{
+  display: flex;
+  justify-content: center;
+}
+.navbar a{
+  padding: 0.8em 1.8em ;
+  text-decoration: none;
+
+}
