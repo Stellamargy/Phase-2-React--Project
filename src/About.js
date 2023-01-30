@@ -1,8 +1,8 @@
 function About(){
     return(
         <div id="about"> 
-      <img src="https://media1.giphy.com/media/dWOKEQ5ewh94RJLemj/giphy.webp?cid=ecf05e47rcin12y2kn07on7cry97h27t8avu76if96q021yi&rid=giphy.webp&ct=g" alt="Be organised with a packing list" />
-      <p>This checklist helps you decide what to pack for any events. Add and check the items you  need to pack (or already packed) </p>
+      <img src="https://media4.giphy.com/media/3orifaGGghuf3hnmsE/giphy.gif?cid=ecf05e4770il0gblboqnfcg7m2notpz9cwvuxjwg7q4suj2u&rid=giphy.gif&ct=g" alt="Be organised with a packing list" />
+      <p id="aboutpar">Packing list  have the objective of overseeing tasks or projects and ensuring nothing important is forgotten during execution. This way, you don't omit anything that might end up compromising your results. Additionally, they ensure activities are completed in orderly, organized fashion. </p>
     </div>
     )
 }

@@ -209,3 +209,16 @@ button:hover {
   text-align: center;
   padding: 1rem;
 }
+
+#homepar{
+  line-height: 2.5;
+ 
+
+}
+
+#about{
+  height: 80vh;
+  min-height: 400px;
+  background-color: papayawhip;
+
+}
